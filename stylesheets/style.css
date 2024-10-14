@@ -41,4 +41,24 @@ section {
 
     padding-left: 1.2%;
     padding-right: 1.2%;
+
+
+    /* borde redondeado con un radio de 5 píxeles */
+
+    /* en navegadores basados en WebKit, 
+   como versiones antiguas de Safari y Chrome. */
+    -webkit-border-radius: 5px;
+
+    /* en navegadores antiguos de Mozilla, 
+   como Firefox.  */
+    -moz-border-radius: 5px;
+
+    /* en navegadores modernos. */
+    border-radius: 5px;
+
+    /* sombra a un elemento */
+
+    -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+    -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+    box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
 }
