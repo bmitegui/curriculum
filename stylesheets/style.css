@@ -89,3 +89,17 @@ footer ul {
     text-align: center;
     width: fit-content;
 }
+
+nav ul {
+    /* Modelo de diseño flexible */
+    display: flex;
+    justify-content: space-around;
+}
+
+section form {
+
+    /* Modelo de diseño en cuadrícula */
+    display: grid;
+    row-gap: 0.5rem;
+
+}
