@@ -103,3 +103,47 @@ section form {
     row-gap: 0.5rem;
 
 }
+
+/* #resumen {
+
+    display: flex;
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    height: 24vh;
+    flex-wrap: wrap;
+
+}
+
+#resumen h2,
+#resumen p {
+    width: 50%;
+}
+
+#resumen video {
+    max-width: 50%;
+} */
+
+
+#resumen {
+    display: grid;
+    justify-content: space-around;
+    align-items: stretch;
+    grid-template-areas: "A D" "B D";
+}
+
+#resumen h2 {
+    grid-area: A;
+}
+
+#resumen p {
+    grid-area: B;
+
+}
+
+#resumen video {
+    grid-area: D;
+}
