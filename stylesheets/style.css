@@ -1,149 +1,373 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 200;
-}
-
-* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-h1 {
-    text-align: center;
-    font-weight: bold;
+body {
+    background: #087C7C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-#photo {
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 1000px;
+    background: #fff;
+    margin: 25px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+
+}
+
+.container .left_Side {
+    position: relative;
+    background: rgba(0, 45, 49, 255);
+    padding: 40px;
+}
+
+
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profileText .imgBx {
+    position: relative;
     width: 200px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-.subtitle {
-    color: rgb(107 114 128 / 0.89);
+.profileText .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileText h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: 20px;
     text-transform: uppercase;
-}
-
-section {
-
-    /* margen (espacio externo) superior, derecho, abajo e izquierda */
-    margin: 4px 2px 8px 2px;
-
-    /* borde de grosor 0.2 en puntos, estilo sólido y color hexadecimal #cedddd  */
-    border: 0.2pt solid #cedddd;
-
-    /* relleno (espacio interno) de 
-    1.5% en la parte superior e inferior y 
-    0.8% a los lados derecho e izquierdo. */
-
-    padding: 1.5% 0.8%;
-
-    /* reemplazan el 0.8% inicial en el relleno izquierdo y derecho, 
-    dándoles un valor específico de 1.2% para esos lados. */
-
-    padding-left: 1.2%;
-    padding-right: 1.2%;
-
-
-    /* borde redondeado con un radio de 5 píxeles */
-
-    /* en navegadores basados en WebKit, 
-   como versiones antiguas de Safari y Chrome. */
-    -webkit-border-radius: 5px;
-
-    /* en navegadores antiguos de Mozilla, 
-   como Firefox.  */
-    -moz-border-radius: 5px;
-
-    /* en navegadores modernos. */
-    border-radius: 5px;
-
-    /* sombra a un elemento */
-
-    -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-    -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-    box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
-}
-
-a {
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-    cursor: crosshair;
-}
-
-li {
-    list-style-type: none
-}
-
-footer ul {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
     text-align: center;
-    width: fit-content;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactInfo {
+    padding-top: 40px;
+}
+
+.textBody {
+    color: #fff;
+    font-weight: 300;
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactInfo ul {
+    position: relative;
+}
+
+.contactInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.contactInfo ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #2a7da2;
+}
+
+.contactInfo ul li span {
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactInfo.education li {
+    margin-bottom: 15px;
+}
+
+.contactInfo.education h5 {
+    color: #2a7da2;
+    font-weight: 500;
+}
+
+.contactInfo.education h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+
+.contactInfo.education h4 {
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactInfo.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+
+.contactInfo.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #2a7da2;
 }
 
 nav ul {
-    /* Modelo de diseño flexible */
     display: flex;
+    list-style-type: none;
+    background-color: rgba(0, 45, 49, 255);
+    padding: 0px;
+    margin: 0px;
     justify-content: space-around;
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
-section form {
-
-    /* Modelo de diseño en cuadrícula */
-    display: grid;
-    row-gap: 0.5rem;
-
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-align: center;
 }
 
-/* #resumen {
+.container .right_Side {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
 
+.about {
+    margin-bottom: 50px;
+}
+
+.title2 {
+    color: rgba(0, 45, 49, 255);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.videoContainer {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.about .box {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 20px;
+}
 
+.about .box .year_company {
+    min-width: 200px;
+}
+
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    justify-content: center;
     align-items: center;
-
-    flex-direction: column;
-
-    height: 24vh;
-    flex-wrap: wrap;
-
 }
 
-#resumen h2,
-#resumen p {
-    width: 50%;
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
 }
 
-#resumen video {
-    max-width: 50%;
-} */
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
 
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #2a7da2;
+}
 
-#resumen {
+.skills .skills2 {
+    padding-left: 40px;
+}
+
+.interest ul {
     display: grid;
-    justify-content: space-around;
-    align-items: stretch;
-    grid-template-areas: "A D" "B D";
+    grid-template-columns: repeat(4, 1fr);
 }
 
-#resumen h2 {
-    grid-area: A;
+.interest ul li {
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
 }
 
-#resumen p {
-    grid-area: B;
-
+.interest ul li .fa {
+    color: #2a7da2;
+    font-size: 18px;
+    width: 20px;
 }
 
-#resumen video {
-    grid-area: D;
+form {
+    margin: auto;
+    background: rgba(0, 45, 49, 255);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form .inputBox {
+    margin-bottom: 20px;
+}
+
+form .inputBox label {
+    display: block;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form .inputBox input,
+form .inputBox textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f0f0f0;
+    font-size: 16px;
+}
+
+form .inputBox textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+form .inputBox input:focus,
+form .inputBox textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(42, 125, 162, 0.5);
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #2a7da2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background: #1f6582;
+}
+
+footer {
+    width: 100%;
+    background: rgba(0, 45, 49, 255);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .interest ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about .box {
+        flex-direction: column;
+    }
+
+    .about .box .year_company {
+        min-width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .interest ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
